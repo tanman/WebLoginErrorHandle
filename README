@@ -1,0 +1,6 @@
+SETUP: Download all requirements with 'pip install -r requirements.txt'
+
+NOTES:
+    - I opted to go do two different approaches to this test, one with using polling to dynamically wait for the
+      alert to display, and the other to just use standard sleep statements. The ladder is less code, and even looks
+      cleaner, but is ultimately less reliable.
