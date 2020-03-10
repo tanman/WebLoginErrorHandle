@@ -23,7 +23,7 @@ class ExpertVoice(unittest.TestCase):
 
         time.sleep(1)
         login_alert = driver.find_element_by_class_name('alert-content')
-        self.assertTrue(expected_alert in login_alert.text, "Login alert is incorrect")
+        self.assertTrue(expected_alert == login_alert.text, "Login alert is incorrect")
 
     def test_login_error_handle_polling(self):
         login_page = 'https://www.expertvoice.com/sign-in'
@@ -56,7 +56,7 @@ class ExpertVoice(unittest.TestCase):
                     time.sleep(1)
 
         self.assertTrue(login_alert, "Unable to find the error handling alert")
-        self.assertTrue(expected_alert in login_alert.text, "Login alert is incorrect")
+        self.assertTrue(expected_alert == login_alert.text, "Login alert is incorrect")
 
     def tearDown(self):
         self.driver.close()
